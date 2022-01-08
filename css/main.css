@@ -319,7 +319,7 @@ h2{
     transform: translateX(-50%);
 	background-position: center center;
 	background-size: cover;
-	transition: all 0.2s ease;
+	transition: all 0.2s linear;
 	z-index: 0;
 }
 
@@ -329,7 +329,7 @@ h2{
 	position: relative;
 	top: 0%;
 	background: rgba(0, 0, 0, 0.267);
-	transition: width .1s ease, height .2s ease, top .2s ease, z-index .2s ease;
+	transition: width .1s linear, height .2s linear, top .2s linear, z-index .2s linear;
 	z-index: 999;
 }
 
@@ -343,13 +343,13 @@ h2{
 	cursor: pointer;
 	visibility: visible;
  opacity: 1;
-	transition: visibility 0s, opacity 0.4s ease;
+	transition: visibility 0s, opacity 0.4s linear;
 }
 
 .info.active .fa-info-circle {
 	visibility: hidden;
  opacity: 0;
- transition: visibility 0s, opacity 0.4s ease;
+ transition: visibility 0s, opacity 0.4s linear;
 }
 
 .info .fa-angle-down {
