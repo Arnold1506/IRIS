@@ -31,8 +31,20 @@
 
 
 $(function() {
-	$(".block").on("click", function() {
-		$(".info").toggleClass("active");
+	$("#card1 .block").on("click", function() {
+		$("#card1 .info").toggleClass("active");
+	});
+});
+
+$(function() {
+	$("#card2 .block").on("click", function() {
+		$("#card2 .info").toggleClass("active");
+	});
+});
+
+$(function() {
+	$("#card3 .block").on("click", function() {
+		$("#card3 .info").toggleClass("active");
 	});
 });
 
