@@ -24,6 +24,7 @@ body{
     top: 0;
     left: 0;
     z-index: 4;
+    transition: background-color 1s ease;
 }
 
 .hactive{
@@ -35,9 +36,39 @@ body{
     height: 100%;
 }
 
+.logo-button{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .logo img{
     height: 100%;
 }
+
+.toggle-button {
+    width: 3.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    padding-top: 0;
+    display: none;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: white;
+    display: block;
+    margin: 0.6rem 0;
+  }
 
 .main-nav{
     margin: auto 1rem;
@@ -88,6 +119,10 @@ body{
     letter-spacing: 1.6vh;
 }
 
+.date{
+    font-size: 12vh;
+}
+
 .logo-first{
     font-size: 12vh;
 }
@@ -134,7 +169,7 @@ body{
 }
 
 .intro{
-    margin: 5rem;
+    margin: 2rem;
     text-align: justify;
 }
 
@@ -279,7 +314,7 @@ h2{
     text-align: center;
 }
 
-.card-container{
+/* .card-container{
     display: flex;
     justify-content: space-evenly;
     padding: 2rem;
@@ -379,15 +414,6 @@ h2{
     transform: translateX(-50%);
 }
 
-@keyframes visible {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 .info .content {
 	color: rgba(255, 255, 255, 1);
 	font-family: 'Roboto Condensed', sans-serif;
@@ -422,25 +448,73 @@ h2{
 	visibility: visible;
 	animation-name: entrance-second;
 	animation-duration: 0.5s;
+} */
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
 }
 
-@keyframes entrance-first {
-	0% {
-		top: 200px;
-	}
-	100% {
-		top: 144px;
-	}
+
+.card{
+    width: 15rem;
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px;
+    margin: 2rem;
+
 }
 
-@keyframes entrance-second {
-	0% {
-		top: 200px;
-	}
-	100% {
-		top: 144px;
-	}
+.info {
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+    /* top: 50%; */
+    top:150%;
+    left: 50%;
+    width: 100%;
+    opacity: 1;
+    display:block;
+    transform: translateX(-50%) translateY(-50%);
+	background-position: center center;
+	background-size: cover;
+	transition: all 0.2s linear;
+	z-index: 0;
 }
+
+/* .info.active {
+	width: 100%;
+	height: 200%;
+	position: relative;
+	top: 0%;
+	background: rgba(0, 0, 0, 0.267);
+	transition: width .1s linear, height .2s linear, top .2s linear, z-index .2s linear;
+	z-index: 999;
+} */
+
+.info .content {
+	color: rgba(255, 255, 255, 1);
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	line-height: 110%;
+	font-weight: 400;
+	text-align: center;
+	padding: 24px;
+	position: relative;
+	/* top: 50px; */
+	/* visibility: hidden; */
+}
+
+/* .info.active .content {
+	visibility: visible;
+	animation-name: entrance-first;
+	animation-duration: 0.4s;
+} */
 
 .main-footer{
     overflow:hidden;
@@ -488,18 +562,53 @@ h2{
 
 .footer-end{
     background-color: black;
-
+    opacity: 1;
 }
 
+.show-items{
+    display: block !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    transition: transform 1s, opacity 2s .5s ease-in-out;
+}
 
 @media screen and (max-width:40rem) {
 
     .main-header{
         height: 5vh;
+        flex-direction: column;
+        background-color: black;
+    }
+
+    .logo-button{
+        z-index: 100;
+        background-color: black;
     }
 
     .main-nav{
-        display: none;
+        margin:0;
+        z-index: 5;
+    }
+
+    .toggle-button{
+        display: block;
+    }
+
+    .main-nav__items{
+        /* display: none; */
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        transform: translateY(-50vh);
+        position: absolute;
+        opacity: 0;
+        transition: transform 1s, opacity 2s .5s ease-in-out;
+    }
+
+    .main-nav__item{
+        border-bottom: silver 1px solid;
     }
 
     .card-container{
@@ -509,6 +618,10 @@ h2{
 
     .footer-head{
         display: none;
+    }
+
+    .intro{
+        margin: 1rem;
     }
 
 }

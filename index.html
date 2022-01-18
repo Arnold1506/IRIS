@@ -9,12 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     
     <header class="main-header">
-        <a class="logo" href="#"><img src="./img/logo.png" alt=""></a>
+        <div class="logo-button">
+            <a class="logo" href="#"><img src="./img/logo.png" alt=""></a>
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+        </div>
         <nav class="main-nav">
             <ul class="main-nav__items">
                 <li class="main-nav__item"><a href="#home">Home</a></li>
@@ -43,7 +51,7 @@
             </ul>
         </div>
         <div class="intro" id="intro">
-            <div class="intro-header"><h1>About Iris</h1></div>
+            <div class="intro-header"><h1>About IRIS</h1></div>
             <hr>
             <h3>IRIS is a series of talks given by people from various walks of life. An acronym for Inspire, Resonate, Integrate, and Succeed. IRIS aims at imparting knowledge and key life lessons through people, who have faced multiple challenges as they struggled to make it to the top of their careers.</h3>
         </div>
@@ -139,10 +147,9 @@
         
         <h2 id="speakers">Speakers for Iris 2022</h2>
         <hr>
-        <div class="card-container">
+        <!-- <div class="card-container">
             <div class="card" style="background-image: url(./img/shronit-ladhani.png)" id="card1"> 
                 <div class="info" >
-                    <!-- <i class="fa fa-info fa-1x block"></i> -->
                     <i class="fas fa-info-circle fa-2x block"></i>
                     <i class="fa fa-angle-down fa-2x block"></i>
                     <div class="content"><h2>Shronit Ladhani</h2>
@@ -156,7 +163,6 @@
             </div>
             <div class="card" style="background-image: url(./img/shronit-ladhani.png)" id="card2"> 
                 <div class="info" >
-                    <!-- <i class="fa fa-info fa-1x block"></i> -->
                     <i class="fas fa-info-circle fa-2x block"></i>
                     <i class="fa fa-angle-down fa-2x block"></i>
                     <div class="content"><h2>Shronit Ladhani</h2>
@@ -170,7 +176,6 @@
             </div>
             <div class="card" style="background-image: url(./img/shronit-ladhani.png)" id="card3"> 
                 <div class="info" >
-                    <!-- <i class="fa fa-info fa-1x block"></i> -->
                     <i class="fas fa-info-circle fa-2x block"></i>
                     <i class="fa fa-angle-down fa-2x block"></i>
                     <div class="content"><h2>Shronit Ladhani</h2>
@@ -180,6 +185,41 @@
                     <a class="link" href="#" target="_blank"><i class="fa fa-twitter fa-2x social"></i></a>
                     <a class="link" href="#" target="_blank"><i class="fa fa-dribbble fa-2x social"></i></a>
                     <a class="link" href="#" target="_blank"><i class="fa fa-codepen fa-2x social"></i></a>
+                </div>
+            </div>
+        </div> -->
+        <div class="card-container">
+            <div class="card" id="card1" style="background-image: url(./img/shronit-ladhani.png)">
+                <div class="info" id="info1">
+                    <div class="content"><h2>Shronit Ladhani</h2>
+                        <p>Featured in Brainfeed's 30 Under 30 Entrepreneurs of India</p>
+                        </div>
+                        <p></p>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-twitter fa-2x social"></i></a>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-dribbble fa-2x social"></i></a>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-codepen fa-2x social"></i></a>
+                </div>
+            </div>
+            <div class="card" id="card2" style="background-image: url(./img/shronit-ladhani.png)">
+                <div class="info" id="info2">
+                    <div class="content"><h2>Shronit Ladhani</h2>
+                        <p>Featured in Brainfeed's 30 Under 30 Entrepreneurs of India</p>
+                        </div>
+                        <p></p>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-twitter fa-2x social"></i></a>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-dribbble fa-2x social"></i></a>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-codepen fa-2x social"></i></a>
+                </div>
+            </div>
+            <div class="card" id="card3" style="background-image: url(./img/shronit-ladhani.png)">
+                <div class="info" id="info3">
+                    <div class="content"><h2>Shronit Ladhani</h2>
+                        <p>Featured in Brainfeed's 30 Under 30 Entrepreneurs of India</p>
+                        </div>
+                        <p></p>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-twitter fa-2x social"></i></a>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-dribbble fa-2x social"></i></a>
+                        <a class="link" href="#" target="_blank"><i class="fa fa-codepen fa-2x social"></i></a>
                 </div>
             </div>
         </div>
